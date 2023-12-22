@@ -35,11 +35,11 @@ std::vector<std::vector<char>> Generate_RandomMap(unsigned int seed = time(NULL)
 
     x = std::rand() % MAP_SIZE;
     y = std::rand() % MAP_SIZE;
-    std::cout << "[Map Generator]start point: [" << x << ", " << "]" << std::endl;
+    std::cout << "[Map Generator]start point: [" << x << ", " << y << "]" << std::endl;
     map[x][y] = block_Type::START_POINT;
     x = std::rand() % MAP_SIZE;
     y = std::rand() % MAP_SIZE;
-    std::cout << "[Map Generator]End point: [" << x << ", " << "]" << std::endl;
+    std::cout << "[Map Generator]End point: [" << x << ", " << y << "]" << std::endl;
     map[x][y] = block_Type::END_POINT;
 
     return map;

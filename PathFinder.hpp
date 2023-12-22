@@ -4,7 +4,7 @@
 #include <queue>
 #include <string>
 
-#define DEBUG_PATHFINDER
+#define DEBUG_PATHFINDER_OFF
 
 enum block_Type : char
 {
