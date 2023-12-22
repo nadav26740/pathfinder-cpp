@@ -6,8 +6,8 @@
 #include "PathFinder.hpp"
 
 // the main is for demo only!
-#define MAP_SIZE 20
-#define MAP_DISTRUBTORS 40
+#define MAP_SIZE 50
+#define MAP_DISTRUBTORS 1000
 
 std::vector<std::vector<char>> Generate_RandomMap(unsigned int seed = time(NULL))
 {
@@ -25,7 +25,7 @@ std::vector<std::vector<char>> Generate_RandomMap(unsigned int seed = time(NULL)
         }
     }
 
-    // adding distrubtions!
+    // adding distributions!
     for (int i = 0; i < MAP_DISTRUBTORS; i++)
     {
         map[std::rand() % MAP_SIZE][std::rand() % MAP_SIZE] = block_Type::WALL;
@@ -35,10 +35,16 @@ std::vector<std::vector<char>> Generate_RandomMap(unsigned int seed = time(NULL)
 
     x = std::rand() % MAP_SIZE;
     y = std::rand() % MAP_SIZE;
+    //x = 0;
+    //y = 0;
     std::cout << "[Map Generator]start point: [" << x << ", " << y << "]" << std::endl;
     map[x][y] = block_Type::START_POINT;
+    
+    
     x = std::rand() % MAP_SIZE;
     y = std::rand() % MAP_SIZE;
+    //x = MAP_SIZE - 1;
+    //y = MAP_SIZE - 1;
     std::cout << "[Map Generator]End point: [" << x << ", " << y << "]" << std::endl;
     map[x][y] = block_Type::END_POINT;
 

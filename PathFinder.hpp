@@ -4,7 +4,7 @@
 #include <queue>
 #include <string>
 
-#define DEBUG_PATHFINDER_OFF
+#define DEBUG_PATHFINDER
 
 enum block_Type : char
 {
@@ -42,7 +42,7 @@ struct cords
 /// The start point is marked as block_Type::START_POINT |
 /// The end point is marked as block_Type::END_POINT |
 /// The distributors marked as block_Type::WALL |
-/// Currently the map can't be bigger than 90 cause of char limits</param>
+/// Currently the map can't be bigger than 64 cause of char limits WITHOUT DISTRUBTORS! </param>
 /// <returns>Vector that represent path to from the end point to start point</returns>
 std::vector<cords> path_Finder(std::vector<std::vector<char>> map);
 
